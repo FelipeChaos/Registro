@@ -13,6 +13,13 @@ class MyApp extends StatelessWidget {
       title: 'Registro de Información CS',
       theme: ThemeData(
         primarySwatch: Colors.teal, // Color Verde Turquesa
+        primaryColor: Colors.amber, // Color Amarillo para botones
+        accentColor: Colors.amber[200], // Color de acento
+        scaffoldBackgroundColor: Colors.white, // Fondo claro
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.amber, // Color de fondo de los botones
+          textTheme: ButtonTextTheme.primary, // Estilo de texto de botones
+        ),
       ),
       home: MyHomePage(),
       routes: {
@@ -59,13 +66,19 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Registros de Usuarios'),
+              title: Text(
+                'Registros de Usuarios',
+                style: TextStyle(color: Colors.teal), // Cambiar al color verde turquesa
+              ),
               onTap: () {
                 Navigator.pushNamed(context, '/usuario');
               },
             ),
             ListTile(
-              title: Text('Registros de Computadores'),
+              title: Text(
+                'Registros de Computadores',
+                style: TextStyle(color: Colors.teal), // Cambiar al color verde turquesa
+              ),
               onTap: () {
                 Navigator.pushNamed(context, '/computador');
               },
